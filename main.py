@@ -4,6 +4,12 @@ from middlewares.error_handler import ErrorHadler
 from routers.movie import movie_router
 from routers.users import users_router
 from fastapi.responses import HTMLResponse
+from uvicorn import uvicorn
+import os
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0",
+    port=int(os.environ.get("PORT", 8000)))
 
 app = FastAPI()
 app.title = "Mi app con FastAPI"
