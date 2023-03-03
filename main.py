@@ -4,7 +4,7 @@ from middlewares.error_handler import ErrorHadler
 from routers.movie import movie_router
 from routers.users import users_router
 from fastapi.responses import HTMLResponse
-from uvicorn import uvicorn
+import uvicorn
 import os
 
 if __name__ == "__main__":
